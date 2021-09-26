@@ -1,0 +1,78 @@
+.duo-switch {
+  $track-height: 0.6em;
+  $track-width: 1.4em;
+
+  $handle-size: 0.9em;
+  $handle-top: -($handle-size - $track-height)/2;
+  $handle-left: -$handle-size / 2;
+  $handle-offset: -(2 * $handle-left) + $track-width - $handle-size;
+
+  user-select: none;
+  cursor: pointer;
+
+  .duo-switch-track {
+    height: $track-height;
+    width: $track-width;
+    position: relative;
+    margin: 0.6em;
+    border-radius: 30px;
+    transition: background-color 300ms;
+
+    .duo-switch-handle {
+      width: $handle-size;
+      height: $handle-size;
+      border-radius: 100%;
+      position: absolute;
+      top: $handle-top;
+      left: $handle-left;
+      box-shadow: $SHADOW_0;
+      transition: transform 300ms, background-color 300ms, box-shadow 300ms;
+
+      &:hover {
+        box-shadow: $SHADOW_1;
+      }
+    }
+  }
+
+  &.duo-switch-checked {
+    .duo-switch-handle {
+      transform: translateX($handle-offset);
+    }
+  }
+}
+
+.app-dark {
+  .duo-switch-unchecked .duo-switch-track {
+    background-color: rgba($color: $TYPOGRAPHY_2, $alpha: 0.6);
+  }
+
+  .duo-switch-unchecked .duo-switch-handle {
+    background-color: $TYPOGRAPHY_2;
+  }
+
+  .duo-switch-checked .duo-switch-track {
+    background-color: rgba($color: $PRIMARY_LIGHT, $alpha: 0.6);
+  }
+
+  .duo-switch-checked .duo-switch-handle {
+    background-color: $PRIMARY_LIGHT;
+  }
+}
+
+.app-light {
+  .duo-switch-unchecked .duo-switch-track {
+    background-color: rgba($color: $TYPOGRAPHY_2, $alpha: 0.6);
+  }
+
+  .duo-switch-unchecked .duo-switch-handle {
+    background-color: $TYPOGRAPHY_2;
+  }
+
+  .duo-switch-checked .duo-switch-track {
+    background-color: rgba($color: $PRIMARY, $alpha: 0.6);
+  }
+
+  .duo-switch-checked .duo-switch-handle {
+    background-color: $PRIMARY;
+  }
+}

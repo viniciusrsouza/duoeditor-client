@@ -1,0 +1,21 @@
+.app-light {
+  background-color: $SURFACE_1;
+  * {
+    color: $TYPOGRAPHY_3;
+  }
+
+  .duo-container {
+    background-color: $SURFACE_0;
+  }
+}
+
+.app-dark {
+  background: $SURFACE_5;
+  * {
+    color: $TYPOGRAPHY_5;
+  }
+
+  .duo-container {
+    background: $SURFACE_3;
+  }
+}

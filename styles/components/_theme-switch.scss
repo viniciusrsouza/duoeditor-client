@@ -1,0 +1,32 @@
+.duo-theme-picker .duo-icon {
+  cursor: pointer;
+  transition: color 300ms;
+}
+
+.app-light {
+  .duo-theme-picker .duo-icon {
+    color: $TYPOGRAPHY_4;
+
+    &:hover {
+      color: $PRIMARY;
+    }
+  }
+
+  .duo-theme-picker .duo-icon-selected {
+    color: $PRIMARY;
+  }
+}
+
+.app-dark {
+  .duo-theme-picker .duo-icon {
+    color: $TYPOGRAPHY_1;
+
+    &:hover {
+      color: $PRIMARY_LIGHT;
+    }
+  }
+
+  .duo-theme-picker .duo-icon-selected {
+    color: $PRIMARY_LIGHT;
+  }
+}

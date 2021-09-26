@@ -1,0 +1,13 @@
+@import "global";
+@import "colors";
+@import "themes";
+
+// pages
+@import "pages/home";
+
+// components
+@import "components/navbar";
+@import "components/button";
+@import "components/icon";
+@import "components/switch";
+@import "components/theme-switch";
